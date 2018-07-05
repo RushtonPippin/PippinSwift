@@ -1,0 +1,1 @@
+# About the Author - [Rushton Pippin](https://rushtonpippin.com)
