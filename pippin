@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+#!/bin/bash
+
+_VERSION="0.8.9"
+
+
+_generateDocs() {
+
+  # jazzy \
+  #   --clean \
+  #   --author Rushton Pippin \
+  #   --author_url http://rushtonpippin.com \
+  #   --github_url https://github.com/rushtonpippin/PippinSwift \
+  #   --github-file-prefix https://github.com/realm/realm-cocoa/tree/v0.96.2 \
+  #   --module-version 0.96.2 \
+  #   --xcodebuild-arguments -scheme,RealmSwift \
+  #   --module RealmSwift \
+  #   --root-url https://rushtonpippin.com/pippinswift/docs/ \
+  #   --output docs/swift_output \
+  #   --theme docs/themes
+  #  --source-directory PippinSwift/PippinSwift/ 
+
+  jazzy \
+    --clean \
+    --theme docs/themes/jazzy/_theme \
+    --source-directory PippinSwift \
+    --output docs/dist \
+    --documentation=docs/src/*.md
+    --author Rushton Pippin \
+    --author_url http://rushtonpippin.com \
+    --github_url https://github.com/rushtonpippin/PippinSwift \
+    --root-url https://rushtonpippin.com/pippinswift/docs \
+    --readme README.md
+    # --xcodebuild-arguments -scheme,RealmSwift \
+    # --module RealmSwift \
+
+}
+
+_generateDocs
