@@ -20,20 +20,23 @@ _generateDocs() {
   #   --theme docs/themes
   #  --source-directory PippinSwift/PippinSwift/ 
 
-  jazzy \
-    --clean \
-    --theme docs/themes/jazzy/_theme \
-    --source-directory PippinSwift \
-    --output docs/dist \
-    --documentation=docs/src/*.md
-    --author Rushton Pippin \
-    --author_url http://rushtonpippin.com \
-    --github_url https://github.com/rushtonpippin/PippinSwift \
-    --root-url https://rushtonpippin.com/pippinswift/docs \
-    --readme README.md
-    # --xcodebuild-arguments -scheme,RealmSwift \
-    # --module RealmSwift \
+  # jazzy \
+  #   --clean \
+  #   --theme docs/themes/jazzy/_theme \
+  #   --source-directory PippinSwift \
+  #   --output docs/dist \
+  #   --documentation=docs/src/*.md
+  #   --author Rushton Pippin \
+  #   --author_url http://rushtonpippin.com \
+  #   --github_url https://github.com/rushtonpippin/PippinSwift \
+  #   --root-url https://rushtonpippin.com/pippinswift/docs \
+  #   --readme README.md
+  #   # --xcodebuild-arguments -scheme,RealmSwift \
+  #   # --module RealmSwift \
 
+  cd PippinSwift/
+  jazzy --config .jazzy.json
+  cd ../
 }
 
 _generateDocs
